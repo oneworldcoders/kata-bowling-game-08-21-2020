@@ -44,4 +44,8 @@ func(game Game) IsSpare(index int) bool {
     return game.Rolls[index] + game.Rolls[index + 1] == 10
 }
 
-func(game Game) RollMany(rolls int, pins int) {}
+func(game Game) RollMany(rolls int, pins int) {
+    for i := 0; i < rolls; i++ {
+        game.Roll(pins)
+    }
+}
